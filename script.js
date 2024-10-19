@@ -8,9 +8,7 @@ function createHeart() {
         heart.classList.add('heart');
     
         heart.style.left = Math.random() * 100 + 'vw'; 
-      
         heart.style.top = Math.random() * 100 + 'vh';  
-      
         heart.style.animationDuration = Math.random() * 3 + 2 + 's';
 
         heartContainer.appendChild(heart);
@@ -24,12 +22,13 @@ function createHeart() {
 setInterval(createHeart, 150);
 
 const envelope = document.getElementById('envelope');
-const cardContent = document.getElementById('card-content');
+const letter = document.getElementById('letter');
+const openButton = document.getElementById('open-envelope');
 
-envelope.addEventListener('click', () => {
+openButton.addEventListener('click', () => {
     envelope.classList.add('opened');
 
     setTimeout(() => {
-        cardContent.classList.remove('hidden');
-    }, 500);
+        letter.classList.remove('hidden');
+    }, 100);
 });
