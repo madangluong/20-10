@@ -30,7 +30,6 @@ body {
     position: absolute;
     animation: floatUp 5s ease-in infinite;
     opacity: 0;
-    transform: translateY(100%);
 }
 
 @keyframes floatUp {
